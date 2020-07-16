@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="chiquinho_v2">
+  <link
+    name="tabuleiro">
+    <inertial>
+      <origin
+        xyz="-0.053849 -0.51006 -0.011739"
+        rpy="0 0 0" />
+      <mass
+        value="2.5582" />
+      <inertia
+        ixx="0.064723"
+        ixy="-2.6123E-06"
+        ixz="4.931E-10"
+        iyy="0.068871"
+        iyz="-0.0021361"
+        izz="0.1292" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chiquinho_v2/meshes/tabuleiro.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chiquinho_v2/meshes/tabuleiro.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.040221 -0.025132 0.17371"
+        rpy="0 0 0" />
+      <mass
+        value="0.30294" />
+      <inertia
+        ixx="0.0010793"
+        ixy="4.8131E-08"
+        ixz="-8.2534E-06"
+        iyy="0.0011236"
+        iyz="-2.3316E-10"
+        izz="0.00013231" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chiquinho_v2/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92941 0.76863 0.67059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chiquinho_v2/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="eixo_x"
+    type="prismatic">
+    <origin
+      xyz="-0.067241 -0.67505 -0.019913"
+      rpy="0 -0.0043041 -1.5708" />
+    <parent
+      link="tabuleiro" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.161"
+      upper="0.171"
+      effort="100"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.051914 0.037891 -0.038128"
+        rpy="0 0 0" />
+      <mass
+        value="0.30095" />
+      <inertia
+        ixx="0.00015077"
+        ixy="-3.0896E-10"
+        ixz="1.4168E-05"
+        iyy="0.00053473"
+        iyz="8.327E-09"
+        izz="0.00048865" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chiquinho_v2/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chiquinho_v2/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="eixo_y"
+    type="prismatic">
+    <origin
+      xyz="-0.015172 -0.084957 0.25683"
+      rpy="1.5708 0 -0.0028653" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.159"
+      upper="0.103"
+      effort="50"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.032458 -0.029976 -0.017685"
+        rpy="0 0 0" />
+      <mass
+        value="0.094999" />
+      <inertia
+        ixx="3.5677E-05"
+        ixy="3.2585E-06"
+        ixz="1.4221E-08"
+        iyy="2.499E-05"
+        iyz="1.4612E-09"
+        izz="3.2826E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chiquinho_v2/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://chiquinho_v2/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="eixo_z"
+    type="prismatic">
+    <origin
+      xyz="-0.21378 0.018874 -0.057508"
+      rpy="-3.1388 -0.00077402 0.27353" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0.96282 0.27013 0" />
+    <limit
+      lower="-0.103"
+      upper="0.189"
+      effort="50"
+      velocity="0.1" />
+  </joint>
+</robot>
